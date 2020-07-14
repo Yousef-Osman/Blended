@@ -1,0 +1,17 @@
+<section class="d-flex h-100 justify-content-center align-items-center" style="min-height: calc(100vh - 80px)">
+    <div class="col-lg-3 col-md-5 p-4 shadow bg-white rounded">
+        <form #loginForm="ngForm" (ngSubmit)="login()">
+            <div class="form-group py-4">
+                <h3 class="text-center">Login</h3>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" name="username" required [(ngModel)]="model.username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password" required [(ngModel)]="model.password">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+        </form>
+    </div>
+</section>
+
